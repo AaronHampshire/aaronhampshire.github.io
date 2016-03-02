@@ -1,0 +1,91 @@
+// Navagation
+nav {
+    
+    // base
+    margin: 0;
+    width: 250px;
+    top: 0px;
+    bottom: 0;
+    left: 0px;
+    position: fixed;
+    display: block;
+    height: 100%;
+    background: #556270;
+    padding: 0;
+    
+    // sub-selectors
+    a, a:visited {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .navigation {
+        list-style-type: none;
+        border-top: #666;
+        border-bottom: #444;
+        padding-top: 30px;
+    }
+    
+    ul {
+        margin-top: 70px;
+        padding-left: 0px;
+    }
+    
+    li {
+        border-bottom: 1px solid #777;
+        border-top: 1px solid #777;
+        padding: 20px;
+        margin-top: -1px;
+    }
+}
+
+// Navigation Menu
+.menu {
+    
+    // variables
+    $nav_vert_position: 15px;
+    
+    // base
+    position: fixed;
+    top: $nav_vert_position;
+    left: 15px;
+    z-index: 100;
+    padding: 10px;
+    cursor: pointer;
+    background: inherit;
+    padding: 10px 35px 16px 0px;
+    
+    // sub-selectors
+    .navbar {
+        cursor: pointer;
+        height: 5px;
+        width: 35px;
+        position: absolute;
+        display: block;
+        content: '';
+        background: #000;
+        transition: all 300ms ease-in-out;
+    }
+    
+    .top {
+        top: $nav_vert_position - 15px;
+    }
+    
+    .bottom {
+        top: $nav_vert_position + 5px;
+    }
+}
+
+// Darken Effect
+.darken {
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    background: #000;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    z-index:20;
+}

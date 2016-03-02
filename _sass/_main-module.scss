@@ -1,0 +1,15 @@
+// Main Content Wrapper
+.site-wrap {
+    position: fixed;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    overflow-x:hidden;
+    background: #fff;
+    z-index: 10;
+}
+
+// Content
+.home {
+    margin: 100px;
+}

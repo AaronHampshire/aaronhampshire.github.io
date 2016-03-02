@@ -1,0 +1,18 @@
+.is-hidden {
+    display: none;
+}
+
+.is-transparent {
+    background: transparent !important;
+    color: transparent !important;
+}
+
+.is-rotated-cw {
+    transform: rotate(45deg);
+    top: inherit !important;
+}
+
+.is-rotated-ccw {
+    transform: rotate(-45deg);
+    top: inherit !important;
+}
