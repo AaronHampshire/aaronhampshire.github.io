@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: $background;
+    color: $text-color;
+}
+
+a, a:hover, a:visited, a:active {
+    color: $red;
+    text-decoration: none;
+    
+    .alternative {
+        color: $blue;
+    }
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.center {
+    text-align: center;
+    margin: 0 auto;
+}
+

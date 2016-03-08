@@ -10,6 +10,49 @@
 }
 
 // Content
-.home {
-    margin: 100px;
+.welcome {
+
+    background: $blue;
+    color: #eee;
+    padding: 100px 0 80px 0;
+    position: relative;
+    
+    .circle {
+    	border-radius: 50%;
+    	-webkit-border-radius: 50%;
+    	-moz-border-radius: 50%;
+    	margin: 0;
+    }
+    
+    .thick-border {
+        border: 8px solid #eee;
+        width: 250px;
+        height: 250px;
+        margin: 3px;
+    }
+    
+    .head-shot {
+        margin: 20px 0;
+    }
+    
+    .welcome-message {
+        padding: 20px 50px;
+    }
+    
 }
+
+.welcome:after {
+    background: inherit;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transform: skewY(-2deg);
+    transform-origin: 100%;
+    z-index: -1;
+}
+
+
