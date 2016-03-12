@@ -7,6 +7,8 @@
     overflow-x:hidden;
     background: $background;
     z-index: 10;
+    margin: 0;
+    padding: 0;
 }
 
 // Content
@@ -21,6 +23,8 @@
     	-webkit-border-radius: 50%;
     	-moz-border-radius: 50%;
     	margin: 0;
+    	width: 200px;
+        height: 200px;
     }
     
     .thick-border {
@@ -30,6 +34,7 @@
     
     .head-shot {
         margin: 20px 0;
+        
     }
     
     .welcome-message {
@@ -44,6 +49,33 @@
         font-family: "Pacifico", "Open Sans", cursive;
         color: $text-color-alt;
         font-size: 320%;
+    }
+    
+    @include media-query($tablet) {
+        .welcome-message {
+            font-size: 150%;
+        }
+        
+        .page-heading {
+            font-family: "Pacifico", "Open Sans", cursive;
+            font-size: 250%;
+        }
+    }
+    
+    @include media-query($phone) {
+        .welcome-message {
+            font-size: 120%;
+        }
+        
+        .page-heading {
+            font-family: "Pacifico", "Open Sans", cursive;
+            font-size: 200%;
+        }
+        
+        .circle {
+            width: 170px;
+            height: 170px;
+        }
     }
 }
 
