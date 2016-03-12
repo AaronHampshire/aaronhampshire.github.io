@@ -2,7 +2,7 @@
 $(".menu").click( function() {
     if($(".site-wrap").hasClass("slide-right")) {
         $(".site-wrap").toggleClass("slide-right");
-        $(".site-wrap,.darken,.menu").animate({
+        $(".site-wrap,.darken").animate({
             left: "-=250"
             }, 300, function() {
         });
@@ -13,7 +13,7 @@ $(".menu").click( function() {
     }
     else {
         $(".site-wrap").toggleClass("slide-right");
-        $(".site-wrap,.darken,.menu").animate({
+        $(".site-wrap,.darken").animate({
             left: "+=250" }, 300, function() {
         });
         $('.darken').fadeIn({queue: false});

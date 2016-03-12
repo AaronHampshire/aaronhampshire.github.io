@@ -5,18 +5,17 @@
     height: 100%;
     width: 100%;
     overflow-x:hidden;
-    background: #fff;
+    background: $background;
     z-index: 10;
 }
 
 // Content
 .welcome {
 
-    background: $blue;
-    color: #eee;
-    padding: 100px 0 80px 0;
+    background: $dark-blue;
+    padding: 80px 0 80px 0;
     position: relative;
-    
+
     .circle {
     	border-radius: 50%;
     	-webkit-border-radius: 50%;
@@ -25,9 +24,7 @@
     }
     
     .thick-border {
-        border: 8px solid #eee;
-        width: 250px;
-        height: 250px;
+        border: 3px solid $text-color-alt;
         margin: 3px;
     }
     
@@ -36,23 +33,22 @@
     }
     
     .welcome-message {
-        padding: 20px 50px;
+        display: inline-block;
+        padding: 20px 0px;
+        color: $text-color-alt;
+        font-family: 'Raleway', sans-serif;
+        font-size: 170%;
     }
     
-}
-
-.welcome:after {
-    background: inherit;
-    bottom: 0;
-    content: '';
-    display: block;
-    height: 50%;
-    left: 0;
-    position: absolute;
-    right: 0;
-    transform: skewY(-2deg);
-    transform-origin: 100%;
-    z-index: -1;
+    .page-heading {
+        font-family: "Pacifico", "Open Sans", cursive;
+        color: $text-color-alt;
+        font-size: 320%;
+    }
 }
 
 
+.about {
+    min-height: 800px;
+    background: $blue;
+}
