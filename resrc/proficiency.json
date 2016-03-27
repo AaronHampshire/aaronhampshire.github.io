@@ -1,0 +1,59 @@
+{
+    "September 2014": {
+        "HTML": "80",
+        "CSS": "50",
+        "JQuery": "10",
+        "Javascript": "5",
+        "Java": "80",
+        "Python": "20",
+        "LaTeX": "90",
+        "C++": "45",
+        "Git": "20",
+        "Agile": "20",
+        "Linux": "75"
+    },
+    "March 2015": {
+        "C#": "60",
+        "HTML": "85",
+        "CSS": "55",
+        "JQuery": "25",
+        "Javascript": "15",
+        "Java": "75",
+        "Python": "75",
+        "LaTeX": "85",
+        "C++": "30",
+        "Git": "65",
+        "Agile": "50",
+        "Linux": "80"
+    },
+    "September 2015": {
+        "C#": "70",
+        "T-SQL": "40",
+        "HTML": "90",
+        "CSS": "70",
+        "JQuery": "55",
+        "Javascript": "30",
+        "Java": "60",
+        "Python": "80",
+        "LaTeX": "80",
+        "C++": "25",
+        "Git": "80",
+        "Agile": "80",
+        "Linux": "75"
+    },
+    "March 2016": {
+        "C#": "75",
+        "T-SQL": "65",
+        "HTML": "95",
+        "CSS": "75",
+        "JQuery": "65",
+        "Javascript": "30",
+        "Java": "45",
+        "Python": "60",
+        "LaTeX": "70",
+        "C++": "20",
+        "Git": "80",
+        "Agile": "90",
+        "Linux": "70"
+    }
+}
