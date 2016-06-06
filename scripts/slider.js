@@ -2,19 +2,18 @@ $(".menu").click( function() {
     menuSlide();
 });
 
+$(".darken").click( function() {
+    menuSlide();
+});
+
+$("nav a").click( function() {
+    menuSlide();
+});
+
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     $( ".site-wrap").on( "swiperight", menuSlide );
     $(".darken").on( "swipeleft", menuSlide );
 }
-
-$(document).keydown(function(e) {
-    switch(e.which) {
-        case 37:  case 39: // left & right
-            menuSlide();
-            break;
-        default: return;
-    }
-});
 
 function menuSlide (event) {
     if($(".site-wrap").hasClass("slide-right")) {

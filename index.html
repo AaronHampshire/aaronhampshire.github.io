@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="welcome">
+<div id="welcome" class="welcome">
     <center>
         <div class="welcome-message">
             <div class="page-heading">Aaron Hampshire</div>
@@ -16,66 +16,16 @@ layout: default
     </center>
 </div>
 
-<div class="proficiencies">
+<div id="proficiencies" class="proficiencies">
     <h1>Proficiencies</h1>
-    asdfasdfasd
-    fasdfasd
-    fasdf
-    asdfasdfsd
+    <div class='charts'></div>
+
+    <a class='update' href="#" data="September 2014">September 2014</a> |
+    <a class='update' href="#" data="March 2015">March 2015</a> |
+    <a class='update' href="#" data="September 2015">September 2015</a> |
+    <a class='update' href="#" data="March 2016">March 2016</a>
 </div>
 
-<script>
-    
-    var data = {
-        "C#": [60.0]
-    };
-    var random;
-    var margin = {top: 50, right: 20, bottom: 20, left: 20};
-        width = 200 - margin.left - margin.right,
-        height = 250 - margin.top - margin.bottom,
-        radius = Math.min(width, height) / 2;
-        
-    var arc = d3.svg.arc()
-        .endAngle(function(d) { console.log(d); return 2*Math.PI*d.data/100; })
-        .startAngle(0)
-        .outerRadius(radius - 10)
-        .innerRadius(radius - 30);
-    
-    var overallarc = d3.svg.arc()
-        .outerRadius(radius - 5)
-        .innerRadius(radius - 35);
-        
-    var pie = d3.layout.pie()
-        .sort(null)
-        .value(function(d) { return d; });
-        
-    var svg = d3.select('.proficiencies')
-        .append('div')
-            .attr('class', 'skill-chart')
-        .append('svg')
-            .data(pie(data["C#"]))
-            .attr('height', height + margin.top + margin.bottom)
-            .attr('width', width + margin.left + margin.right)
-            
-    var skills = svg
-        .append('g')
-            .attr('transform', 'translate(' + (margin.left + radius) + ',' + (margin.top + radius) + ')')
-            .attr("class", "arc");
-    
-    skills.append("path")
-        .attr("d", overallarc)
-            .style("fill", "#5A6796");
-    skills.append("path")
-        .attr("d", arc)
-            .style("fill", function(d) { return '#F75D4D'; });
+<script src="{{ "/scripts/proficiencies.js" | prepend: site.baseurl }}"></script>
 
-    skills.append("text")
-        .text(function(d) {return d.data + '%';})
-        .attr('class', 'percent-label')
-        .attr('transform', function(d) { console.log(this.scrollHeight/2); return 'translate(' + (-this.scrollWidth/2.0) + ',' + (this.scrollHeight/2.0-7) +')'; } )
-        .style('width', width);
-        
-    svg.append("text")
-        .text(function(d, i) {return Object.getOwnPropertyNames(data)[i];})
-        .attr('transform', 'translate (0,50)')
-</script>
+

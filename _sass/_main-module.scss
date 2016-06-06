@@ -82,10 +82,13 @@
 
 .proficiencies {
     margin: 0;
-    min-height: 800px;
     background: $blue;
     color: $dark-blue;
     padding: 50px 100px;
+
+    .charts {
+        text-align: center;
+    }
     
     .percent-label {
         font-family: 'Raleway', sans-serif;
@@ -96,4 +99,30 @@
         margin: 0;
     }
     
+    .skill-chart {
+        width: 200px;
+        display: inline;
+        margin: 20px 5px 20px 5px;
+    }
+    
+    .skill-header {
+        fill: $dark-blue;
+        font-family: 'Raleway', sans-serif;
+        font-size: 150%;
+        font-weight: 400;
+    }
+    
+    .show-all-charts {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    
+    @include media-query($tablet) {
+        padding: 80px 20px;
+    }
+    
+    @include media-query($phone) {
+        padding: 70px 20px;
+    }
 }
