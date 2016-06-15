@@ -79,7 +79,6 @@
     }
 }
 
-
 .proficiencies {
     margin: 0;
     background: $blue;
@@ -133,6 +132,10 @@
     
     .pure-button:hover {
         text-decoration: none;
+    }
+    
+    .pure-button.active {
+        background: lighten($dark-blue, 15%);
     }
     
     .prof-buttons {

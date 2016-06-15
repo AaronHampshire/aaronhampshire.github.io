@@ -1,4 +1,5 @@
-var data, actualStuff, skills, svg, texty, percent;
+// Setup Variables
+var data, donutPercent, skills, svg, texty, percent;
 
 var margin = {top: 50, right: 20, bottom: 20, left: 20};
     width = 200 - margin.left - margin.right,
@@ -18,10 +19,11 @@ var arc = d3.svg.arc()
         .innerRadius(radius - 30)
         .endAngle(function(d) {return d;});
         
- var pie = d3.layout.pie()
+var pie = d3.layout.pie()
         .sort(null)
         .value(function(d) { return d; });
-            
+
+// Draw Initial Donuts
 d3.json("resrc/proficiency.json", function(error, json) {
     if (error) return console.warn(error);
         data = json;
@@ -41,7 +43,7 @@ d3.json("resrc/proficiency.json", function(error, json) {
         .attr("d", overallarc)
         .style("fill", "#5A6796");
             
-    actualStuff = skills.append("path")
+    donutPercent = skills.append("path")
         .datum(function(d) {return  [d.Proficiency/100 * TAU];})
         .attr("d", arc)
             .style("fill", function(d) { return '#F75D4D'; })
@@ -59,6 +61,7 @@ d3.json("resrc/proficiency.json", function(error, json) {
         .attr('transform', 'translate (0,30)');
 });
     
+// Update based on date
 function updateSkills (date) {
     d3.json("resrc/proficiency.json", function(error, json) {
         if (error) return console.warn(error);
@@ -76,9 +79,9 @@ function updateSkills (date) {
         
         svg = d3.selectAll('.skill-chart');
     
-        actualStuff.each(function(d) {})
+        donutPercent.each(function(d) {})
     
-        actualStuff.data(data.Technologies)
+        donutPercent.data(data.Technologies)
             .datum(function(d) {return [(d.Proficiency * TAU / 100)];}).transition().duration(1000).attrTween("d", arcTween);
             
         percent.data(data.Technologies).transition().duration(5000).text(function(d) { return d.Proficiency + '%';});
@@ -93,9 +96,11 @@ function updateSkills (date) {
         }
     }
 }
-   
   
+// Update event
 $(".update").click(function () {
+    $(".prof-buttons .active").removeClass("active");
+    $(this).addClass("active");
     updateSkills($( this ).attr("data"));
 })
     
